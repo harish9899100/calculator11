@@ -8,9 +8,10 @@ function appendToDisplay(value) {
   
   function calculate() {
     try {
-      const result = eval(document.getElementById("display").value);
+      const expression = document.getElementById("display").value;
+      const result = eval(expression);
       document.getElementById("display").value = result;
-    } catch {
+    } catch (error) {
       alert("Invalid expression");
     }
   }
